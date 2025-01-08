@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/* sidebar */
+.sidebar {
+	position: fixed;
+	height: 100%;
+	width: 240px;
+	background: #0a6214;
+	transition: all 0.5s ease;
+}
+.sidebar.active {
+	width: 240px;
+}
+.sidebar .logo-details {
+	height: 80px;
+	display: flex;
+	color: black;
+	align-items: center;
+}
+.sidebar .logo-details i {
+	font-size: 28px;
+	font-weight: 500;
+	color: white;
+	min-width: 60px;
+	text-align: center;
+}
+.sidebar .logo-details {
+	color: #4ab135;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.logo_name {
+	color: white;
+	font-size: 18px;
+}
+
+.sidebar .nav-links {
+	margin-top: 10px;
+}
+.sidebar .nav-links li {
+	position: relative;
+	list-style: none;
+	height: 50px;
+}
+.sidebar .nav-links li a {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: all 0.4s ease;
+}
+.sidebar .nav-links li a.active {
+	background: #15c129;
+}
+.sidebar .nav-links li a:hover {
+	background: #15c129;
+}
+.sidebar .nav-links li i {
+	min-width: 60px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+
+.sidebar .nav-links li a .links_name {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.subsidebar .links_name {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.subsidebar #group-icon {
+	color:white
+}
+
+.subsidebar {
+    max-height: 0; 
+	position: fixed;
+    overflow: hidden; 
+    background-color: #0a6214;
+    padding: 0 10px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sidebar .nav-links li .sidebarname {
+    color: black;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.cetak_name{
+	color: black;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.edit_name{
+	color: black;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.hapus_name{
+	color: black;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tambah_name{
+	color: white;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.simpan_name{
+	color: white;
+	z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.sidebar .subsidebar:hover {
+    background: #15c129;
+}
+
+.sidebar .subsidebar:hover .links_name  {
+    color: black; 
+}
+
+.btn-simpan:hover .simpan_name  {
+    color: black; 
+}
+
+.sidebar .subsidebar:hover #group-icon  {
+    color: black; 
+}
+
+.sidebar .nav-links li a:hover  .links_name {
+	color: black;
+}
+
+.sidebar .nav-links li a:active .links_name {
+	color: black;
+}
+
+.sidebar .nav-links li a:hover  #group-icon {
+	color: black;
+}
+
+.sidebar .nav-links li a:active #group-icon {
+	color: black;
+}
+
+.show {
+    height: auto; 
+    padding: 10px;
+    overflow: visible; 
+}
+
+/* style card-categories */
+.cards-categories {
+	display: flex;
+	flex-direction: column;
+}
+
+.cards-categories h2 {
+	font-family: "Roboto", sans-serif;
+	color:#fff;
+}
+
+.card-categories {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	padding: 14px;
+	text-align: justify;
+	background-color: #7a8488;
+}
+
+.card h5 {
+	margin: 10px 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	color: #fff;
+}
+
+.card p {
+	font-size: 12px;
+	color: #fff;
+}
+
+/* main content */
+.home-section {
+    position: relative;
+    background: white;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+}
+
+.login-section {
+    background-color: white;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+}
+
+.logininput {
+	width: 100%;
+	padding: 8px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.loginbutton {
+	background-color: #0a6214;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	z-index: 2;
+}
+
+.loginlabel{
+    font-weight: bold;
+}
+
+.login-section button:hover {
+	background-color:  lime;
+}
+
+.error-messages, .success-message {
+	color: red;
+	margin-bottom: 10px;
+}
+
+.success-message {
+	color: green;
+}
+
+.home-section .sidebar-button #group-icon {
+    color: white;
+}
+
+.sidebar.active ~ .home-section {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.home-section nav {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	background: #0a6214;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: calc(100% - 240px);
+	left: 240px;
+	z-index: 100;
+	padding: 0 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav {
+	left: 60px;
+	width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 500;
+}
+nav .sidebar-button i {
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: black;
+	border: 2px solid white;
+	border-radius: 6px;
+	height: 50px;
+	min-width: 190px;
+}
+
+nav .profile-details .admin_name {
+	font-size: 15px;
+	font-weight: 500;
+	color: white;
+	white-space: nowrap;
+}
+.home-section .home-content {
+	position: relative;
+	padding-top: 104px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.tarif-label {
+    margin-top: 10px;
+	margin-bottom:10px;
+  }
+
+.tarif-value {
+    font-size: 16px;
+    color: #333;
+}
+
+.total-label {
+    margin-top: 20px;
+    font-weight: bold;
+	margin-bottom:20px;
+  }
+  
+.total-label-2 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+.total-value {
+    font-size: 16px;
+    color: #333;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    display: flex;
+    gap: 5px;
+
+}
+
+.search-form .form {
+    padding: 5px;
+    border: 5px solid #000000;
+    border-radius: 5px;
+}
+
+.search-form .btn-cari {
+    padding: 5px 10px;
+    background: #0a6214;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form .btn-cari:hover {
+    background-color: lime;
+}
+
+.search-form .btn-cari:hover .cari_name {
+ color:black;
+}
+
+.btn {
+	background-color: #15c129;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn a {
+	text-decoration: none;
+	color: black;
+}
+
+.btn-tambah {
+	background: #0a6214; 
+	color: white; 
+	padding: 10px 20px; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+	margin-top: 15px;
+	margin-bottom: 20px; 
+}
+
+.btn-simpan {
+	width: 100%;
+	background-color: #0a6214;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btncetak {
+	background-color: rgb(0, 216, 123);
+	color: white;
+	
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btnedit {
+	background-color: rgb(144, 189, 238);
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btnhapus {
+	background-color: rgb(255, 68, 93);
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: lime;
+}
+
+.btn-tambah:hover {
+	background-color: lime;
+}
+
+.btn-tambah:hover .tambah_name{
+	color: black;
+}
+
+.btncetak:hover {
+	background-color: rgb(0, 95, 54);
+}
+
+.btncetak:hover .cetak_name { 
+	color: white; 
+}
+
+.btnedit:hover {
+	background-color: rgb(33, 77, 124);
+}
+
+.btnedit:hover .edit_name { 
+	color: white; 
+}
+
+.btnhapus:hover {
+	background-color: rgb(145, 24, 40);
+}
+
+.btnhapus:hover .hapus_name { 
+	color: white; 
+}
+
+.table-data {
+	text-align: center;
+	color: black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	background-color: black;
+	border: 0.5px solid white;
+	padding: 5px 20px;
+}
+
+td {
+	border: 1px solid black;
+	padding: 5px 20px;
+}
+.form-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 30px;
+	margin: 10px auto;
+	border-radius: 10px;
+}
+
+.form-login p {
+    margin-bottom: 15px;
+  }
+
+.input {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid rgb(148, 148, 148);
+}
+
+
+.input-readonly {
+width: 100%;
+margin: 10px 0;
+padding: 10px;
+border-radius: 10px;
+background-color: #f5f5f5; /* Warna latar belakang abu-abu muda */
+color: #888; /* Warna teks pudar */
+border: 1px solid #ccc; /* Border lembut */
+cursor: not-allowed; /* Menunjukkan bahwa elemen tidak bisa diinteraksi */
+}
+
+
+
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+	.sidebar {
+		width: 60px;
+	}
+	.sidebar.active {
+		width: 220px;
+	}
+	.home-section {
+		width: calc(100% - 60px);
+		left: 60px;
+	}
+	.sidebar.active ~ .home-section {
+		/* width: calc(100% - 220px); */
+		overflow: hidden;
+		left: 220px;
+	}
+	.home-section nav {
+		width: calc(100% - 60px);
+		left: 60px;
+	}
+	.sidebar.active ~ .home-section nav {
+		width: calc(100% - 220px);
+		left: 220px;
+	}
+}
+@media (max-width: 700px) {
+	nav .profile-details {
+		display: none !important;
+	}
+	.home-section nav .profile-details {
+		height: 50px;
+		min-width: 40px;
+	}
+}
+@media (max-width: 550px) {
+	.profile-details {
+		display: none !important;
+	}
+}
+@media (max-width: 400px) {
+	.sidebar {
+		width: 0;
+	}
+	.sidebar.active {
+		width: 60px;
+	}
+	.home-section {
+		width: 100%;
+		left: 0;
+	}
+	.sidebar.active ~ .home-section {
+		left: 60px;
+		width: calc(100% - 60px);
+	}
+	.home-section nav {
+		width: 100%;
+		left: 0;
+	}
+	.sidebar.active ~ .home-section nav {
+		left: 60px;
+		width: calc(100% - 60px);
+	}
+}
